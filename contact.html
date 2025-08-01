@@ -62,11 +62,9 @@
         <label class="block text-gray-700 font-medium">Message</label>
         <textarea name="message" rows="5" class="w-full mt-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500" required></textarea>
       </div>
-      <input type="hidden" name="_redirect" value="nath971.github.io/nqainnov-plus/merci.html">
       <button 
         type="submit" 
-        class="w-full bg-teal-600 text-white font-bold py-4 px-6 rounded-md hover:bg-teal-700 transform hover:scale-105 transition duration-300 text-lg shadow-lg"
-      >
+        class="w-full bg-teal-600 text-white font-bold py-4 px-6 rounded-md hover:bg-teal-700 transform hover:scale-105 transition duration-300 text-lg shadow-lg">
         🚀 Envoyer le message
       </button>
     </form>
@@ -82,34 +80,39 @@
     const statusDiv = document.getElementById('form-status');
 
     form.addEventListener("submit", async function(event) {
-      event.preventDefault();
-      const data = new FormData(form);
-      const action = form.getAttribute("action");
+  event.preventDefault();
+  const data = new FormData(form);
+  const action = form.getAttribute("action");
 
-      try {
-        const response = await fetch(action, {
-          method: "POST",
-          body: data,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
-
-        if (response.ok) {
-          form.reset();
-          statusDiv.textContent = "✅ Votre message a été envoyé avec succès.";
-          statusDiv.className = "text-green-600 bg-green-100 p-4 rounded-md";
-          statusDiv.style.display = "block";
-        } else {
-          const resData = await response.json();
-          throw new Error(resData.message || "Erreur lors de l'envoi.");
-        }
-      } catch (error) {
-        statusDiv.textContent = "❌ Une erreur est survenue. Veuillez réessayer.";
-        statusDiv.className = "text-red-600 bg-red-100 p-4 rounded-md";
-        statusDiv.style.display = "block";
+  try {
+    const response = await fetch(action, {
+      method: "POST",
+      body: data,
+      headers: {
+        'Accept': 'application/json'
       }
     });
+
+    if (response.ok) {
+      form.reset();
+      statusDiv.textContent = "✅ Votre message a été envoyé avec succès.";
+      statusDiv.className = "text-green-600 bg-green-100 p-4 rounded-md";
+      statusDiv.style.display = "block";
+
+      // ✅ Redirection manuelle après 1 secondes
+      setTimeout(() => {
+        window.location.href = "merci.html";
+      }, 1000);
+    } else {
+      throw new Error("Erreur lors de l'envoi.");
+    }
+  } catch (error) {
+    statusDiv.textContent = "❌ Une erreur est survenue. Veuillez réessayer.";
+    statusDiv.className = "text-red-600 bg-red-100 p-4 rounded-md";
+    statusDiv.style.display = "block";
+  }
+});
+
   </script>
 </body>
 </html>
