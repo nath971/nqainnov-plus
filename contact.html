@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - NQA Innov+</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-gray-800">NQA Innov+</div>
+      <div class="hidden md:flex space-x-8">
+        <a href="index.html" class="text-gray-600 hover:text-teal-600">Accueil</a>
+        <a href="produits.html" class="text-gray-600 hover:text-teal-600">Nos Produits</a>
+        <a href="a-propos.html" class="text-gray-600 hover:text-teal-600">À Propos</a>
+        <a href="contact.html" class="text-teal-600 font-bold">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mx-auto px-6 py-16">
+    <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Nous Contacter</h1>
+    <form class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md space-y-6">
+      <div>
+        <label class="block text-gray-700 font-medium">Nom</label>
+        <input type="text" class="w-full mt-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+      </div>
+      <div>
+        <label class="block text-gray-700 font-medium">Email</label>
+        <input type="email" class="w-full mt-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+      </div>
+      <div>
+        <label class="block text-gray-700 font-medium">Sujet</label>
+        <select class="w-full mt-1 p-3 border border-gray-300 rounded-md">
+          <option>Informations sur un produit</option>
+          <option>Service après-vente</option>
+          <option>Partenariat</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-gray-700 font-medium">Message</label>
+        <textarea rows="5" class="w-full mt-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"></textarea>
+      </div>
+      <button type="submit" class="bg-teal-600 text-white font-bold py-3 px-6 rounded-md hover:bg-teal-700">Envoyer</button>
+    </form>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-10 text-center">
+    <p>&copy; 2025 NQA Innov+. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>

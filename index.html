@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NQA Innov+ - La Pompe Automatique</title>
+    
+    <!-- Tailwind CSS pour un design moderne et responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts pour une typographie élégante -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="bg-gray-50">
+
+    <!-- EN-TÊTE DE NAVIGATION -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-800">
+                NQA Innov+
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-teal-600">Accueil</a>
+                <a href="produits.html" class="text-gray-600 hover:text-teal-600">Nos Produits</a>
+                <a href="a-propos.html" class="text-gray-600 hover:text-teal-600">À Propos</a>
+                <a href="contact.html" class="text-gray-600 hover:text-teal-600">Contact</a>
+            </div>
+            <!-- Icône pour le menu mobile -->
+            <div class="md:hidden">
+                <button class="text-gray-600 hover:text-teal-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SECTION PRINCIPALE "HÉROS" -->
+    <main class="container mx-auto px-6 py-16 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight underline decoration-teal-500 decoration-4 underline-offset-4">La Fin du Gonflage Manuel.</h1>
+        <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">NQA Innov+ présente la solution portable et puissante pour gonfler vos pneus, ballons et équipements de sport sans effort.</p>
+        <a href="produits.html" class="mt-8 inline-block bg-teal-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-teal-700 hover:scale-105 transition-transform duration-300 ease-in-out">
+            Découvrir nos produits
+        </a>
+    </main>
+
+    <!-- SECTION PRODUIT PHARE -->
+    <section class="bg-white py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Notre Produit Phare</h2>
+            <div class="flex justify-center">
+                
+                <!-- Produit Unique -->
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden max-w-2xl w-full hover:shadow-2xl transition-shadow duration-300">
+                    <img src="./images/pompe.jpg" alt="Image de la pompe automatique NQA Innov+" class="w-full h-auto object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800">Pompe Automatique Portable</h3>
+                        <p class="mt-3 text-gray-600">La solution tout-en-un pour vos besoins de gonflage. Compacte, rapide et compatible avec tout : pneus de voiture, vélos, ballons de sport, voiles de kitesurf, matelas gonflables et plus encore.</p>
+                        <div class="mt-6 flex flex-col sm:flex-row justify-between items-center">
+                            <span class="text-3xl font-bold text-teal-600 mb-4 sm:mb-0">67,00 €</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION "À PROPOS" / RÉASSURANCE -->
+    <section class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-800">Innovation & Fiabilité</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                Chez NQA Innov+, notre mission est de simplifier votre quotidien grâce à des produits technologiques, fiables et bien pensés. Chaque produit est rigoureusement testé pour garantir performance et durabilité.
+            </p>
+        </div>
+    </section>
+
+    <!-- PIED DE PAGE -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 NQA Innov+. Tous droits réservés.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="hover:text-teal-400">Facebook</a>
+                <a href="#" class="hover:text-teal-400">Instagram</a>
+                <a href="#" class="hover:text-teal-400">Contact</a>
+                <a href="#" class="hover:text-teal-400">Mentions Légales</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
