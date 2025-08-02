@@ -1,38 +1,60 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <!-- Métadonnées -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nos Produits - NQA Innov+</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&display=swap" rel="stylesheet">
+
+  <!-- Feuille de style personnalisée -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-gray-50">
 
-  <!-- Header -->
+  <!-- ==================== EN-TÊTE ==================== -->
   <header class="bg-white shadow-sm sticky top-0 z-50">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="text-2xl font-bold text-gray-800">NQA Innov+</div>
+
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="index.html">
+          <img src="images/logo_nqa.png" alt="Logo NQA Innov+" class="h-10 w-auto">
+        </a>
+      </div>
+
+      <!-- Menu navigation (desktop) -->
       <div class="hidden md:flex space-x-8">
         <a href="index.html" class="text-gray-600 hover:text-teal-600">Accueil</a>
         <a href="produits.html" class="text-teal-600 font-bold">Nos Produits</a>
         <a href="a-propos.html" class="text-gray-600 hover:text-teal-600">À Propos</a>
         <a href="contact.html" class="text-gray-600 hover:text-teal-600">Contact</a>
       </div>
+
     </nav>
   </header>
 
-  <!-- Contenu principal -->
+  <!-- ==================== CONTENU PRINCIPAL ==================== -->
   <main class="container mx-auto px-6 py-16">
-    <h1 class="section-title">Nos Produits</h1>
 
+    <!-- Titre de la page -->
+    <h1 class="text-5xl md:text-6xl font-bold text-center text-gray-800 font-serif underline decoration-teal-500 decoration-4 underline-offset-8 mb-16">
+      Nos Produits
+    </h1>
+
+    <!-- Grille des produits -->
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-      <!-- Produit 1 -->
-      <div class="bg-white rounded-xl shadow-md p-6 flex flex-col">
+      <!-- ===== Produit 1 : VentiX ===== -->
+      <a href="pompe.html" class="bg-white rounded-xl shadow-md p-6 flex flex-col hover:shadow-lg transition">
         <img src="./images/pompe.jpg" alt="Pompe Portable" class="product-image mb-4">
-        <h2 class="text-xl font-semibold text-gray-800 mb-2">Pompe Automatique Portable</h2>
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">VentiX</h2>
         <ul class="text-gray-600 text-sm mb-4 space-y-1">
           <li>• Pression max : 150 PSI</li>
           <li>• Batterie 2000mAh</li>
@@ -40,16 +62,13 @@
           <li>• Arrêt automatique</li>
           <li>• Adaptateurs multi-usages</li>
         </ul>
-        <div class="mt-auto flex justify-between items-center">
-          <span class="text-2xl font-bold text-teal-600">67,00 €</span>
-          <a href="contact.html" class="inline-block mt-4 px-4 py-2 bg-teal-600 text-white font-medium rounded-lg shadow hover:bg-teal-700 hover:shadow-md transition">Demander plus d'infos</a>
-        </div>
-      </div>
+        <span class="text-2xl font-bold text-teal-600 mt-auto">67,00 €</span>
+      </a>
 
-      <!-- Produit 2 -->
-      <div class="bg-white rounded-xl shadow-md p-6 flex flex-col">
+      <!-- ===== Produit 2 : VentiX Pro ===== -->
+      <a href="pompe_pro.html" class="bg-white rounded-xl shadow-md p-6 flex flex-col hover:shadow-lg transition">
         <img src="./images/Render_Ventus_Pro.jpg" alt="Pompe Grand Modèle" class="product-image mb-4">
-        <h2 class="text-xl font-semibold text-gray-800 mb-2">Pompe Haute Capacité</h2>
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">VentiX Pro</h2>
         <ul class="text-gray-600 text-sm mb-4 space-y-1">
           <li>• Pression max : 200 PSI</li>
           <li>• Batterie 4000mAh</li>
@@ -57,14 +76,11 @@
           <li>• Gonflage rapide</li>
           <li>• Idéal pour SUV / 4x4</li>
         </ul>
-        <div class="mt-auto flex justify-between items-center">
-          <span class="text-2xl font-bold text-teal-600">89,00 €</span>
-          <a href="contact.html" class="inline-block mt-4 px-4 py-2 bg-teal-600 text-white font-medium rounded-lg shadow hover:bg-teal-700 hover:shadow-md transition">Demander plus d'infos</a>
-        </div>
-      </div>
+        <span class="text-2xl font-bold text-teal-600 mt-auto">89,00 €</span>
+      </a>
 
-      <!-- Produit 3 -->
-      <div class="bg-white rounded-xl shadow-md p-6 flex flex-col">
+      <!-- ===== Produit 3 : Filtre à Air ===== -->
+      <a href="filtre.html" class="bg-white rounded-xl shadow-md p-6 flex flex-col hover:shadow-lg transition">
         <img src="./images/filtre-air.jpg" alt="Filtre à air" class="product-image mb-4">
         <h2 class="text-xl font-semibold text-gray-800 mb-2">Mini Filtre à Air Voiture</h2>
         <ul class="text-gray-600 text-sm mb-4 space-y-1">
@@ -74,14 +90,11 @@
           <li>• Ioniseur intégré</li>
           <li>• Parfum optionnel</li>
         </ul>
-        <div class="mt-auto flex justify-between items-center">
-          <span class="text-2xl font-bold text-teal-600">39,00 €</span>
-          <a href="contact.html" class="inline-block mt-4 px-4 py-2 bg-teal-600 text-white font-medium rounded-lg shadow hover:bg-teal-700 hover:shadow-md transition">Demander plus d'infos</a>
-        </div>
-      </div>
+        <span class="text-2xl font-bold text-teal-600 mt-auto">39,00 €</span>
+      </a>
 
-      <!-- Produit 4 -->
-      <div class="bg-white rounded-xl shadow-md p-6 flex flex-col">
+      <!-- ===== Produit 4 : Aspirateur Compact ===== -->
+      <a href="aspi.html" class="bg-white rounded-xl shadow-md p-6 flex flex-col hover:shadow-lg transition">
         <img src="./images/aspirateur_voiture.jpg" alt="Mini Aspirateur" class="product-image mb-4">
         <h2 class="text-xl font-semibold text-gray-800 mb-2">Aspirateur Voiture Compact</h2>
         <ul class="text-gray-600 text-sm mb-4 space-y-1">
@@ -91,16 +104,13 @@
           <li>• Léger et ergonomique</li>
           <li>• Idéal pour l’habitacle</li>
         </ul>
-        <div class="mt-auto flex justify-between items-center">
-          <span class="text-2xl font-bold text-teal-600">54,00 €</span>
-          <a href="contact.html" class="inline-block mt-4 px-4 py-2 bg-teal-600 text-white font-medium rounded-lg shadow hover:bg-teal-700 hover:shadow-md transition">Demander plus d'infos</a>
-        </div>
-      </div>
+        <span class="text-2xl font-bold text-teal-600 mt-auto">54,00 €</span>
+      </a>
 
     </div>
   </main>
 
-  <!-- Footer -->
+  <!-- ==================== PIED DE PAGE ==================== -->
   <footer class="bg-gray-800 text-white py-10 text-center">
     <p>&copy; 2025 NQA Innov+. Tous droits réservés.</p>
   </footer>
