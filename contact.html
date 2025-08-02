@@ -1,54 +1,90 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <!-- Métadonnées -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - NQA Innov+</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&display=swap" rel="stylesheet">
+
+  <!-- Feuille de style personnalisée -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-gray-50">
 
+  <!-- ==================== EN-TÊTE ==================== -->
   <header class="bg-white shadow-sm sticky top-0 z-50">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="text-2xl font-bold text-gray-800">NQA Innov+</div>
+
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="index.html">
+          <img src="images/logo_nqa.png" alt="Logo NQA Innov+" class="h-10 w-auto">
+        </a>
+      </div>
+
+      <!-- Navigation (desktop) -->
       <div class="hidden md:flex space-x-8">
         <a href="index.html" class="text-gray-600 hover:text-teal-600">Accueil</a>
         <a href="produits.html" class="text-gray-600 hover:text-teal-600">Nos Produits</a>
         <a href="a-propos.html" class="text-gray-600 hover:text-teal-600">À Propos</a>
         <a href="contact.html" class="text-teal-600 font-bold">Contact</a>
       </div>
+
     </nav>
   </header>
 
+  <!-- ==================== CONTENU PRINCIPAL ==================== -->
   <main class="container mx-auto px-6 py-16">
+
+    <!-- Titre -->
     <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Nous Contacter</h1>
-    
-    <!-- Message de notification -->
+
+    <!-- Message de notification après soumission -->
     <div id="form-status" class="hidden text-center font-semibold text-lg mb-6"></div>
 
+    <!-- ===== FORMULAIRE DE CONTACT ===== -->
     <form 
       action="https://formspree.io/f/meozzyzo" 
       method="POST" 
-      class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md space-y-6"
       id="contact-form"
+      class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md space-y-6"
     >
-      <!-- Champ anti-spam (honeypot) -->
+
+      <!-- Champ anti-spam (honeypot invisible) -->
       <input type="text" name="_gotcha" class="hidden" aria-hidden="true">
 
-      <div>
-        <label class="block text-gray-700 font-medium">Nom et prénom</label>
-        <input type="text" name="nom" class="w-full mt-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+      <!-- Nom & Prénom -->
+      <div class="md:flex md:space-x-4">
+        <div class="md:w-1/2 w-full mb-4 md:mb-0">
+          <label class="block text-gray-700 font-medium">Nom</label>
+          <input type="text" name="nom" required class="w-full mt-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500">
+        </div>
+        <div class="md:w-1/2 w-full">
+          <label class="block text-gray-700 font-medium">Prénom</label>
+          <input type="text" name="prenom" required class="w-full mt-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500">
+        </div>
       </div>
+
+      <!-- Email -->
       <div>
         <label class="block text-gray-700 font-medium">Email</label>
-        <input type="email" name="email" class="w-full mt-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+        <input type="email" name="email" required class="w-full mt-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500">
       </div>
+
+      <!-- Téléphone -->
       <div>
         <label class="block text-gray-700 font-medium">Téléphone</label>
         <input type="tel" name="telephone" class="w-full mt-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500">
       </div>
+
+      <!-- Sujet du message -->
       <div>
         <label class="block text-gray-700 font-medium">Sujet</label>
         <select name="sujet" class="w-full mt-1 p-3 border border-gray-300 rounded-md">
@@ -58,61 +94,65 @@
           <option>Autre</option>
         </select>
       </div>
+
+      <!-- Message -->
       <div>
         <label class="block text-gray-700 font-medium">Message</label>
-        <textarea name="message" rows="5" class="w-full mt-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500" required></textarea>
+        <textarea name="message" rows="5" required class="w-full mt-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"></textarea>
       </div>
+
+      <!-- Bouton d’envoi -->
       <button 
         type="submit" 
-        class="w-full bg-teal-600 text-white font-bold py-4 px-6 rounded-md hover:bg-teal-700 transform hover:scale-105 transition duration-300 text-lg shadow-lg">
+        class="w-full bg-teal-600 text-white font-bold py-4 px-6 rounded-md hover:bg-teal-700 transform hover:scale-105 transition duration-300 text-lg shadow-lg"
+      >
         🚀 Envoyer le message
       </button>
     </form>
   </main>
 
+  <!-- ==================== PIED DE PAGE ==================== -->
   <footer class="bg-gray-800 text-white py-10 text-center">
     <p>&copy; 2025 NQA Innov+. Tous droits réservés.</p>
   </footer>
 
-  <!-- Script pour gérer le succès/erreur -->
+  <!-- ==================== SCRIPT DE TRAITEMENT FORMULAIRE ==================== -->
   <script>
     const form = document.getElementById('contact-form');
     const statusDiv = document.getElementById('form-status');
 
     form.addEventListener("submit", async function(event) {
-  event.preventDefault();
-  const data = new FormData(form);
-  const action = form.getAttribute("action");
+      event.preventDefault();
+      const data = new FormData(form);
+      const action = form.getAttribute("action");
 
-  try {
-    const response = await fetch(action, {
-      method: "POST",
-      body: data,
-      headers: {
-        'Accept': 'application/json'
+      try {
+        const response = await fetch(action, {
+          method: "POST",
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.reset();
+          statusDiv.textContent = "✅ Votre message a été envoyé avec succès.";
+          statusDiv.className = "text-green-600 bg-green-100 p-4 rounded-md";
+          statusDiv.style.display = "block";
+
+          // Redirection automatique après 1 seconde
+          setTimeout(() => {
+            window.location.href = "merci.html";
+          }, 1000);
+        } else {
+          throw new Error("Erreur lors de l'envoi.");
+        }
+      } catch (error) {
+        statusDiv.textContent = "❌ Une erreur est survenue. Veuillez réessayer.";
+        statusDiv.className = "text-red-600 bg-red-100 p-4 rounded-md";
+        statusDiv.style.display = "block";
       }
     });
-
-    if (response.ok) {
-      form.reset();
-      statusDiv.textContent = "✅ Votre message a été envoyé avec succès.";
-      statusDiv.className = "text-green-600 bg-green-100 p-4 rounded-md";
-      statusDiv.style.display = "block";
-
-      // ✅ Redirection manuelle après 1 secondes
-      setTimeout(() => {
-        window.location.href = "merci.html";
-      }, 1000);
-    } else {
-      throw new Error("Erreur lors de l'envoi.");
-    }
-  } catch (error) {
-    statusDiv.textContent = "❌ Une erreur est survenue. Veuillez réessayer.";
-    statusDiv.className = "text-red-600 bg-red-100 p-4 rounded-md";
-    statusDiv.style.display = "block";
-  }
-});
-
   </script>
+
 </body>
 </html>
