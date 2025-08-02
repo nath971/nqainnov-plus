@@ -1,48 +1,35 @@
 /* ====================== TYPOGRAPHIE ====================== */
-
-/* Typographie de base pour tout le corps du site */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f9fafb; /* Tailwind gray-50 */
-    color: #1f2937;            /* Tailwind gray-800 */
+    background-color: #f9fafb;
+    color: #1f2937;
     opacity: 0;
     animation: fadeIn 1s ease-out forwards;
 }
 
-/* Titres principaux (utilisent Playfair) */
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
 }
 
-
 /* ====================== ANIMATIONS ====================== */
-
-/* Animation de fade-in au chargement */
 @keyframes fadeIn {
     to {
         opacity: 1;
     }
 }
 
-
 /* ====================== NAVIGATION ====================== */
-
-/* Liens dans le menu principal */
 nav a {
     transition: color 0.3s ease;
 }
 
-/* Couleur au survol des liens de nav */
 nav a:hover {
-    color: #14b8a6; /* Tailwind teal-600 */
+    color: #14b8a6;
 }
 
-
 /* ====================== BOUTONS ====================== */
-
-/* Bouton principal (teal) */
 .button-primary {
-    background-color: #14b8a6; /* teal-600 */
+    background-color: #14b8a6;
     color: white;
     font-weight: bold;
     padding: 0.75rem 2rem;
@@ -53,13 +40,12 @@ nav a:hover {
 }
 
 .button-primary:hover {
-    background-color: #0d9488; /* teal-700 */
+    background-color: #0d9488;
     transform: scale(1.05);
 }
 
-/* Bouton secondaire (gris foncé) */
 .button-secondary {
-    background-color: #1f2937; /* gray-800 */
+    background-color: #1f2937;
     color: white;
     font-weight: bold;
     padding: 0.75rem 1.5rem;
@@ -69,52 +55,39 @@ nav a:hover {
 }
 
 .button-secondary:hover {
-    background-color: #374151; /* gray-700 */
+    background-color: #374151;
 }
 
-
 /* ====================== PIED DE PAGE ====================== */
-
-/* Liens du footer */
 footer a {
     transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #2dd4bf; /* Tailwind teal-400 */
+    color: #2dd4bf;
 }
 
-
 /* ====================== COMPOSANTS GRAPHIQUES ====================== */
-
-/* Image des produits */
 .product-image {
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Titre de section (centralisé) */
 .section-title {
-    font-size: 1.875rem; /* text-3xl */
+    font-size: 1.875rem;
     font-weight: 700;
     color: #1f2937;
     text-align: center;
     margin-bottom: 3rem;
 }
 
-
 /* ====================== LIENS SPÉCIAUX ====================== */
-
-/* Lien souligné (ex. RGPD, mentions légales) */
 a.underline {
     text-decoration: underline;
-    color: #14b8a6; /* teal-600 */
+    color: #14b8a6;
 }
 
-
 /* ====================== STRUCTURE & GRILLE ====================== */
-
-/* Conteneur principal */
 .container {
     max-width: 1280px;
     margin-left: auto;
@@ -123,7 +96,6 @@ a.underline {
     padding-right: 1.5rem;
 }
 
-/* Section générique */
 section {
     padding-top: 5rem;
     padding-bottom: 5rem;
