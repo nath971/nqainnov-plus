@@ -37,7 +37,23 @@
         <a href="contact.html" class="text-gray-600 hover:text-teal-600">Contact</a>
       </div>
 
+      <!-- Icône menu mobile -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-gray-600 hover:text-teal-600">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+          </svg>
+        </button>
+      </div>
     </nav>
+
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white px-6 py-4 space-y-4 shadow-md">
+      <a href="index.html" class="block text-gray-600 hover:text-teal-600">Accueil</a>
+      <a href="produits.html" class="block text-gray-600 hover:text-teal-600">Nos Produits</a>
+      <a href="a-propos.html" class="block text-gray-600 hover:text-teal-600">À Propos</a>
+      <a href="contact.html" class="block text-gray-600 hover:text-teal-600">Contact</a>
+    </div>
   </header>
 
   <!-- ==================== CONTENU PRINCIPAL ==================== -->
@@ -112,7 +128,12 @@
   <footer class="bg-gray-800 text-white py-10 text-center">
     <p>&copy; 2025 NQA Innov+. Tous droits réservés.</p>
   </footer>
-
+    <!-- Script pour menu mobile -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
-
