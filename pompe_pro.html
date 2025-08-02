@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pompe Haute Capacité - NQA Innov+</title>
+
+  <!-- TailwindCSS + Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo ou Nom -->
+      <div class="text-2xl font-bold text-gray-800">NQA Innov+</div>
+
+      <!-- Menu -->
+      <div class="hidden md:flex space-x-8">
+        <a href="index.html" class="text-gray-600 hover:text-teal-600">Accueil</a>
+        <a href="produits.html" class="text-teal-600 font-bold">Nos Produits</a>
+        <a href="a-propos.html" class="text-gray-600 hover:text-teal-600">À Propos</a>
+        <a href="contact.html" class="text-gray-600 hover:text-teal-600">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
+  <main class="container mx-auto px-6 py-16">
+    <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md p-8">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+
+        <!-- Image produit -->
+        <img src="./images/Render_Ventus_Pro.jpg" alt="Pompe Haute Capacité" class="product-image">
+
+        <!-- Détails -->
+        <div>
+          <h1 class="text-3xl font-bold mb-4">VentiX Pro</h1>
+
+          <ul class="text-gray-700 mb-6 space-y-1">
+            <li>• Pression max : 200 PSI</li>
+            <li>• Batterie 4000mAh</li>
+            <li>• Éclairage LED puissant</li>
+            <li>• Gonflage rapide</li>
+            <li>• Idéal pour SUV / 4x4</li>
+          </ul>
+
+          <p class="text-2xl font-bold text-teal-600 mb-4">89,00 €</p>
+
+          <!-- Bouton vers contact -->
+          <a href="contact.html" class="inline-block text-center bg-teal-600 text-white font-medium text-base py-3 px-5 rounded-md shadow-md hover:bg-teal-700 transition duration-300">
+            Demander plus d'infos
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-gray-800 text-white py-10 text-center">
+    <p>&copy; 2025 NQA Innov+. Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>
